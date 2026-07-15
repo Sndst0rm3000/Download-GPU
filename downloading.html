@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Download NVIDIA GeForce RTX 50 Series GPUs FREE WORKING 2026</title>
+
+<style>
+html, body {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    background: #111;
+    color: white;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    text-align: center;
+    width: 400px;
+}
+
+h1 {
+    margin-bottom: 20px;
+    font-weight: normal;
+}
+
+.bar {
+    width: 100%;
+    height: 25px;
+    background: #333;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.fill {
+    width: 0%;
+    height: 100%;
+    background: #76b900;
+    /* Smooth transition for natural-looking progress steps */
+    transition: width 0.4s ease-out; 
+}
+
+#percent {
+    margin-top: 15px;
+    font-size: 20px;
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Downloading NVIDIA GeForce RTX 50 Series graphics cards</h1>
+
+    <div class="bar">
+        <div class="fill" id="fill"></div>
+    </div>
+
+    <div id="percent">0%</div>
+</div>
+
+<script>
+let progress = 0;
+const fill = document.getElementById("fill");
+const percent = document.getElementById("percent");
+
+function updateProgress() {
+    if (progress < 90) {
+        // Step 1: Normal progress with slight randomized increments
+        progress += Math.floor(Math.random() * 3) + 1; 
+        if (progress > 90) progress = 90;
+
+        fill.style.width = progress + "%";
+        percent.textContent = progress + "%";
+
+        // Random delay between 150ms and 450ms for each step
+        setTimeout(updateProgress, Math.random() * 1000 + 250);
+
+    } else if (progress < 99) {
+        // Step 2: The agonizing crawl. Increments by only 1% at a time.
+        progress += 1;
+
+        fill.style.width = progress + "%";
+        percent.textContent = progress + "%";
+
+        // Much longer random delay between steps (1 to 2.5 seconds per percent)
+        setTimeout(updateProgress, Math.random() * 2000 + 1000);
+
+    } else if (progress === 99) {
+        // Step 3: STUCK AT 99%. 
+        // We set a long timeout (15000ms = 15 seconds) to mimic a freeze.
+        setTimeout(() => {
+            progress = 100;
+            fill.style.width = "100%";
+            percent.textContent = "100%";
+
+            // Brief pause at 100% so they can feel a moment of relief before the redirect
+            setTimeout(() => {
+                window.location.href = "NVIDIA-GeForce-RTX-50-Series-All-GPUs.zip";
+            }, 1200);
+
+        }, 30000); // <-- Adjust this number to change how many milliseconds it stays stuck at 99%
+    }
+}
+
+// Kick off the fake installation
+setTimeout(updateProgress, 1000);
+</script>
+
+</body>
+</html>
